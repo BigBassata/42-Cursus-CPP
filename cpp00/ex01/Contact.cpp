@@ -6,69 +6,66 @@
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 14:12:16 by licohen           #+#    #+#             */
-/*   Updated: 2025/05/21 17:26:05 by licohen          ###   ########.fr       */
+/*   Updated: 2025/06/26 16:05:21 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contact.cpp
 #include "Contact.hpp"
 
-Contact::Contact() 
+Contact::Contact()
 {
-
 }
 
-Contact::~Contact() 
+Contact::~Contact()
 {
-
 }
 
 void Contact::setFirstName(std::string firstName)
 {
-    this->firstName = firstName;
+	this->_firstName = firstName;
 }
 
 void Contact::setLastName(std::string lastName)
 {
-    this->lastName = lastName;
+	this->_lastName = lastName;
 }
 
 void Contact::setNickname(std::string nickname)
 {
-    this->nickname = nickname;
+	this->_nickname = nickname;
 }
 
 void Contact::setPhoneNumber(std::string phoneNumber)
 {
-    this->phoneNumber = phoneNumber;
+	this->_phoneNumber = phoneNumber;
 }
 
 void Contact::setDarkestSecret(std::string darkestSecret)
 {
-    this->darkestSecret = darkestSecret;
+	this->_darkestSecret = darkestSecret;
 }
 
 std::string Contact::getFirstName()
 {
-    return this->firstName;
+	return this->_firstName;
 }
 
 std::string Contact::getLastName()
 {
-    return this->lastName;
+	return this->_lastName;
 }
 
 std::string Contact::getNickname()
 {
-    return this->nickname;
+	return this->_nickname;
 }
 
 std::string Contact::getPhoneNumber()
 {
-    return this->phoneNumber;
+	return this->_phoneNumber;
 }
 
 std::string Contact::getDarkestSecret()
 {
-    return this->darkestSecret;
+	return this->_darkestSecret;
 }

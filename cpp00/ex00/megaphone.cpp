@@ -6,7 +6,7 @@
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 17:18:27 by licohen           #+#    #+#             */
-/*   Updated: 2025/05/14 14:23:39 by licohen          ###   ########.fr       */
+/*   Updated: 2025/06/26 15:00:01 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,9 @@
 
 std::string to_upper(std::string str)
 {
-    std::string to_uppercase = str;
-    
-    for (size_t i = 0; i < to_uppercase.length(); i++)
-    {
-        to_uppercase[i] = std::toupper(str[i]);
-    }
-    return (to_uppercase);
+    for (size_t i = 0; i < str.length(); i++)
+        str[i] = std::toupper(str[i]);
+    return str;
 }
 
 int main(int argc, char **argv)

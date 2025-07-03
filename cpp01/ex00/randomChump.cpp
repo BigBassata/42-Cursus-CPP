@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 17:27:52 by licohen           #+#    #+#             */
-/*   Updated: 2025/05/23 17:45:51 by licohen          ###   ########.fr       */
+/*   Created: 2025/06/28 16:25:57 by licohen           #+#    #+#             */
+/*   Updated: 2025/06/28 16:29:16 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void randomChump(std::string name)
 {
-    Zombie random_chump(name);
-
-    random_chump.announce();
+    Zombie randomChump(name);
+    randomChump.annonce();    
 }

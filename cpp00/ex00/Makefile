@@ -1,35 +1,28 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: licohen <licohen@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/25 17:18:21 by licohen           #+#    #+#              #
-#    Updated: 2025/05/22 17:43:51 by licohen          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = Megaphone
+CPP = c++
+OBJ_FOLDER = obj
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
-NAME = megaphone
-OBJ = $(SRC:.cpp=.o)
-FLAGS = -std=c++98 -Wall -Wextra -Werror
-CC = g++
+SRCS = megaphone.cpp
+OBJS = $(SRCS:%.cpp=$(OBJ_FOLDER)/%.o)
 
-%.o: %.cpp
-	$(CC) $(FLAGS) -c $< -o $@
+all: $(OBJ_FOLDER) $(NAME)
 
-all: $(NAME)
+$(OBJ_FOLDER):
+	mkdir -p $(OBJ_FOLDER)
 
-$(NAME) : $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CPP) $(FLAGS) $(OBJS) -o $(NAME)
 
-clean :
-	rm -rf $(OBJ)
+$(OBJ_FOLDER)/%.o: %.cpp $(HEADERS)
+	$(CPP) $(FLAGS) -c $< -o $@
 
-fclean : clean
-	rm -rf $(NAME)
+clean:
+	rm -rf $(OBJ_FOLDER)
 
-re : fclean all
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
 
 .PHONY: all clean fclean re

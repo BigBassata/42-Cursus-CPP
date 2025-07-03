@@ -22,7 +22,6 @@ public:
 
 	typedef Account		t;
 
-// affiche des infos globales
 	static int	getNbAccounts( void );
 	static int	getTotalAmount( void );
 	static int	getNbDeposits( void );
@@ -39,7 +38,6 @@ public:
 
 
 private:
-// element de type statique, communs a tous les objets
 	static int	_nbAccounts;
 	static int	_totalAmount;
 	static int	_totalNbDeposits;
@@ -47,7 +45,6 @@ private:
 
 	static void	_displayTimestamp( void );
 
-// element de type instance, propre a chaque objet
 	int				_accountIndex;
 	int				_amount;
 	int				_nbDeposits;
@@ -57,14 +54,4 @@ private:
 
 };
 
-
-
-// ************************************************************************** //
-// vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
-// -*- indent-tabs-mode:t;                                                   -*-
-// -*- mode: c++-mode;                                                       -*-
-// -*- fill-column: 75; comment-column: 75;                                  -*-
-// ************************************************************************** //
-
-
-#endif /* __ACCOUNT_H__ */
+#endif 

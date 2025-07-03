@@ -5,27 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 14:43:18 by licohen           #+#    #+#             */
-/*   Updated: 2025/05/28 15:09:11 by licohen          ###   ########.fr       */
+/*   Created: 2025/06/28 19:11:15 by licohen           #+#    #+#             */
+/*   Updated: 2025/06/30 15:40:25 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 
-int main() 
+int main()
 {
     std::string brainMessage = "HI THIS IS BRAIN";
     std::string *stringPTR = &brainMessage;
-    std::string &stringREF= brainMessage;
-
-    std::cout << "Adress of string: " << &brainMessage << std::endl;
-    std::cout << "Adress of stringPTR: " << stringPTR << std::endl;
-    std::cout << "Adress of stringREF " << &stringREF << std::endl;
+    std::string &stringREF = brainMessage;
     
-    std::cout << "Value of string: " << brainMessage << std::endl;
-    std::cout << "Value of stringPTR: " << *stringPTR << std::endl;
-    std::cout << "Value of stringREF: " << stringREF << std::endl;
+    std::cout << "Adress of the string: " << &brainMessage << std::endl;
+    std::cout << "Adress of the string: " << stringPTR << std::endl;
+    std::cout << "Adress of the string: " << &stringREF << std::endl;
+
+    std::cout << "Value: " << brainMessage << std::endl;
+    std::cout << "Value: " << *stringPTR << std::endl;
+    std::cout << "Value: " << stringREF << std::endl; 
 
     return 0;
 }
+

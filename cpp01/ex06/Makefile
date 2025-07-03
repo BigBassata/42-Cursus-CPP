@@ -1,8 +1,8 @@
-NAME = Horde
+NAME = Harl_filter
 CXX = c++
 OBJ_FOLDER = obj
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp zombieHorde.cpp Zombie.cpp
+SRCS = 	main.cpp Harl.cpp
 OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_FOLDER)/%.o)
 

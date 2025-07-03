@@ -5,32 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 18:10:29 by licohen           #+#    #+#             */
-/*   Updated: 2025/05/28 15:01:10 by licohen          ###   ########.fr       */
+/*   Created: 2025/06/28 17:10:21 by licohen           #+#    #+#             */
+/*   Updated: 2025/06/28 19:04:24 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie() 
+Zombie::Zombie()
 {
-}
-
-Zombie::Zombie(std::string name) : _name(name) 
-{
+    std::cout << "A zombie is created" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-    std::cout << _name << " has been destroyed." << std::endl; 
+    std::cout << _name << " is destroyed" << std::endl;
 }
 
-void Zombie::setName(std::string newName)
+void Zombie::setName(const std::string& name) 
 {
-    this->_name = newName;
+    _name = name;
 }
 
-void Zombie::announce(void)
+void Zombie::announce()
 {
     std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

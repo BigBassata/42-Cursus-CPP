@@ -1,25 +1,22 @@
-NAME = Sed_is_for_Losers
-# Makefile for Sed_is_for_Losers project
+NAME = sed_replace
 CXX = c++
 OBJ_FOLDER = obj
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
-SRCS = main.cpp utils.cpp
+SRCS = 	main.cpp
+OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJ_FOLDER)/%.o)
 
-all: $(OBJ_FOLDER) $(NAME)
-
-$(OBJ_FOLDER):
-	mkdir -p $(OBJ_FOLDER)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-$(OBJ_FOLDER)/%.o: %.cpp
+$(OBJDIR)/%.o: %.cpp
+	@mkdir -p $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_FOLDER)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)

@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 16:16:14 by licohen           #+#    #+#             */
-/*   Updated: 2025/06/28 16:32:05 by licohen          ###   ########.fr       */
+/*   Created: 2025/07/02 16:41:11 by licohen           #+#    #+#             */
+/*   Updated: 2025/07/02 17:49:24 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-Zombie* newZombie(std::string name)
+#include <iostream>
+#include <fstream>
+#include <string>
+
+class Harl
 {
-    Zombie *zombie;
+    public:
+        Harl();
+        ~Harl();
+        void complain(std::string level);
 
-    zombie = new Zombie(name);
-    return(zombie);
-}
+    private:
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
+};
+
+#endif
