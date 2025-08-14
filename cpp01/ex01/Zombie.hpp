@@ -6,7 +6,7 @@
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 17:03:33 by licohen           #+#    #+#             */
-/*   Updated: 2025/06/28 19:07:20 by licohen          ###   ########.fr       */
+/*   Updated: 2025/07/04 18:29:10 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ class Zombie
 };
 
 Zombie* zombieHorde(int N, std::string name);
-void destroyHorde(Zombie* horde);

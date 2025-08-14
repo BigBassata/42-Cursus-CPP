@@ -6,12 +6,9 @@
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 20:25:14 by licohen           #+#    #+#             */
-/*   Updated: 2025/07/02 20:38:29 by licohen          ###   ########.fr       */
+/*   Updated: 2025/07/03 16:56:10 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Harl.hpp"
-#include <iostream>
 
 #include "Harl.hpp"
 #include <iostream>

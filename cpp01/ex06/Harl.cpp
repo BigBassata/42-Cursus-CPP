@@ -6,7 +6,7 @@
 /*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 20:24:14 by licohen           #+#    #+#             */
-/*   Updated: 2025/07/02 20:36:49 by licohen          ###   ########.fr       */
+/*   Updated: 2025/07/11 15:56:17 by licohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Harl::complain(std::string level)
             (this->*functions[3])();
             break;
         default:
-            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+            std::cout << "Probably complaining about insignificant problems " << std::endl;
             break;
     }
 }
