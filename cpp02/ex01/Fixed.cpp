@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: licohen <licohen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: liamcohen <liamcohen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 16:16:50 by licohen           #+#    #+#             */
-/*   Updated: 2025/08/11 16:27:31 by licohen          ###   ########.fr       */
+/*   Updated: 2025/08/15 18:23:18 by liamcohen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,22 +50,22 @@ Fixed::~Fixed(void)
 
 int Fixed::toInt(void) const
 {
-    return this->_numberValue >> fractionalBitsNb;
+    return (_numberValue >> fractionalBitsNb);
 }
 
 float Fixed::toFloat(void) const
 {
-    return static_cast<float>(this->_numberValue) / (1 << fractionalBitsNb);
+    return (static_cast<float>(_numberValue) / (1 << fractionalBitsNb));
 }
 
 int Fixed::getRawBits(void) const
 {
-    return this->_numberValue;
+    return (_numberValue);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    this->_numberValue = raw;
+    _numberValue = raw;
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed &fixed)
